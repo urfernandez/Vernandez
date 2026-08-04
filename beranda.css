@@ -1,3 +1,16 @@
+    .icon-btn{
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(255,255,255,.14);
+      color:#fff;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      backdrop-filter:blur(10px);
+    }
+
 .menu-drawer {
 	position:fixed;
 	inset:0;
