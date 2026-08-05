@@ -1,0 +1,242 @@
+.faq-hero{
+      margin-top:12px;
+      border-radius:26px;
+      background:linear-gradient(135deg, rgba(37,99,235,.98), rgba(96,165,250,.94));
+      color:#fff;
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 18px 36px rgba(37,99,235,.20);
+    }
+    .faq-hero::before{
+      content:"";
+      position:absolute;
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      background:rgba(255,255,255,.12);
+      top:-70px;
+      right:-60px;
+    }
+    .faq-hero::after{
+      content:"";
+      position:absolute;
+      width:110px;
+      height:110px;
+      border-radius:50%;
+      background:rgba(255,255,255,.10);
+      bottom:-35px;
+      left:-30px;
+    }
+    .faq-hero-inner{
+      position:relative;
+      z-index:1;
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      align-items:center;
+    }
+    .faq-hero h2{ font-size:18px; font-weight:900; line-height:1.2; }
+    .faq-hero p{ margin-top:6px; font-size:12px; line-height:1.5; opacity:.96; }
+    .faq-hero-badge{
+      width:58px;
+      height:58px;
+      border-radius:20px;
+      display:grid;
+      place-items:center;
+      background:rgba(255,255,255,.16);
+      border:1px solid rgba(255,255,255,.22);
+      flex-shrink:0;
+    }
+
+    .faq-search{
+      margin-top:12px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      padding:12px 14px;
+      border-radius:18px;
+      background:#fff;
+      border:1px solid #dbeafe;
+      box-shadow:0 10px 22px rgba(37,99,235,.08);
+    }
+    .faq-search i{ color:#2563eb; font-size:22px; }
+    .faq-search input{
+      width:100%;
+      border:none;
+      outline:none;
+      background:transparent;
+      font-size:13px;
+      color:#0f172a;
+    }
+    .faq-search input::placeholder{ color:#94a3b8; }
+
+    .faq-stats{
+      margin-top:12px;
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:10px;
+    }
+    .faq-stat{
+      padding:12px 10px;
+      border-radius:18px;
+      background:linear-gradient(180deg,#ffffff,#f8fbff);
+      border:1px solid #dbeafe;
+      text-align:center;
+      box-shadow:0 8px 18px rgba(15,23,42,.04);
+    }
+    .faq-stat strong{ display:block; font-size:16px; font-weight:900; color:#2563eb; }
+    .faq-stat span{ display:block; margin-top:4px; font-size:10px; color:#64748b; font-weight:700; line-height:1.2; }
+
+    .faq-category{
+      margin-top:14px;
+      display:flex;
+      gap:8px;
+      overflow-x:auto;
+      padding-bottom:4px;
+      scrollbar-width:none;
+    }
+    .faq-category::-webkit-scrollbar{ display:none; }
+    .faq-chip{
+      flex-shrink:0;
+      border:none;
+      padding:9px 12px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid #dbeafe;
+      color:#334155;
+      font-size:11px;
+      font-weight:800;
+      box-shadow:0 6px 14px rgba(15,23,42,.04);
+      transition:.2s ease;
+    }
+    .faq-chip.active{
+      background:linear-gradient(135deg,#2563eb,#60a5fa);
+      color:#fff;
+      border-color:transparent;
+      box-shadow:0 10px 20px rgba(37,99,235,.16);
+    }
+
+    .faq-list{
+      margin-top:14px;
+      display:grid;
+      gap:10px;
+    }
+    .faq-item{
+      border-radius:20px;
+      background:#fff;
+      border:1px solid #dbeafe;
+      overflow:hidden;
+      box-shadow:0 10px 20px rgba(15,23,42,.05);
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .faq-item[open]{ box-shadow:0 14px 28px rgba(37,99,235,.10); }
+    .faq-item summary{
+      list-style:none;
+      cursor:pointer;
+      padding:14px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .faq-item summary::-webkit-details-marker{ display:none; }
+    .faq-q-icon{
+      width:42px;
+      height:42px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, rgba(37,99,235,.10), rgba(96,165,250,.14));
+      color:#2563eb;
+      flex-shrink:0;
+      font-size:22px;
+    }
+    .faq-q-text{ min-width:0; flex:1; }
+    .faq-q-text strong{
+      display:block;
+      font-size:13px;
+      font-weight:900;
+      color:#0f172a;
+      line-height:1.35;
+    }
+    .faq-q-text span{
+      display:block;
+      margin-top:4px;
+      font-size:11px;
+      color:#64748b;
+      line-height:1.4;
+    }
+    .faq-arrow{
+      color:#94a3b8;
+      font-size:20px;
+      transition:transform .22s ease;
+    }
+    .faq-item[open] .faq-arrow{ transform:rotate(180deg); }
+    .faq-answer{
+      padding:0 14px 14px 68px;
+      font-size:12px;
+      color:#475569;
+      line-height:1.65;
+    }
+    .faq-answer .highlight{
+      display:inline-block;
+      margin-top:8px;
+      padding:8px 10px;
+      border-radius:14px;
+      background:linear-gradient(135deg, rgba(37,99,235,.08), rgba(96,165,250,.10));
+      color:#1d4ed8;
+      font-weight:800;
+      font-size:11px;
+    }
+
+    .faq-contact{
+      margin-top:14px;
+      border-radius:22px;
+      padding:16px;
+      background:linear-gradient(135deg, #eff6ff, #ffffff);
+      border:1px solid #dbeafe;
+      box-shadow:0 12px 24px rgba(37,99,235,.08);
+    }
+    .faq-contact-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .faq-contact h3{ font-size:14px; font-weight:900; color:#0f172a; }
+    .faq-contact p{ margin-top:4px; font-size:11px; color:#64748b; line-height:1.45; }
+    .faq-contact-actions{
+      margin-top:12px;
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:10px;
+    }
+    .faq-contact-btn{
+      border:none;
+      border-radius:16px;
+      padding:12px 10px;
+      background:linear-gradient(135deg,#2563eb,#60a5fa);
+      color:#fff;
+      font-size:11px;
+      font-weight:900;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      box-shadow:0 10px 18px rgba(37,99,235,.14);
+    }
+    .faq-contact-btn.secondary{
+      background:#fff;
+      color:#2563eb;
+      border:1px solid #dbeafe;
+      box-shadow:none;
+    }
+
+    @keyframes floatBubble{ 0%,100%{ transform:translate3d(0,0,0) scale(1); opacity:.16; } 50%{ transform:translate3d(0,10px,0) scale(1.05); opacity:.24; } }
+
+    @media (max-width: 420px){
+      .faq-stats{ grid-template-columns:1fr; }
+      .faq-contact-actions{ grid-template-columns:1fr; }
+      .faq-answer{ padding-left:14px; }
+      .faq-item summary{ align-items:flex-start; }
+    }
